@@ -13,8 +13,8 @@ class AddToDo extends React.Component {
         return(
         <div className='addToDoContainer'>
             <form onSubmit={(e)=> this.submitToDo(e)}>
-                <input id='addToDoInput' onChange={(e)=> this.updateInput(e)} type='text'></input>
-                <button type='submit'>Add ToDo</button>
+                <input className='submitField' placeholder='Enter task' id='addToDoInput' onChange={(e)=> this.updateInput(e)} type='text'></input>
+                <button className='submitbtn' type='submit'>Add ToDo</button>
             </form>
         </div>
         )

@@ -15,8 +15,13 @@ constructor() {
   render() {
     return(
     <div>
-    <AddToDo addToDoFn= {this.addToDo}></AddToDo>
-    <ToDoList updateToDoFn= {this.updateToDo} toDos={this.state.toDos}></ToDoList>
+      <div>
+        <h1> Create your ToDo-List right here</h1>
+      </div>
+        <div className='toDoListArea'>
+          <AddToDo addToDoFn= {this.addToDo}></AddToDo>
+          <ToDoList updateToDoFn= {this.updateToDo} toDos={this.state.toDos}></ToDoList>
+        </div>
     </div>
       )
   }
