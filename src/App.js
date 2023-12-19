@@ -1,7 +1,10 @@
 import React from 'react'
-import ToDoList from './ToDoList/ToDoList';
-import AddToDo from './AddToDo/AddToDo';
+import ToDoList from './ItemAndList/ToDoList';
+import AddToDo from './ItemAndList/AddToDo';
+import Progress from './ItemAndList/Progress';
 import './css/style.css'
+
+
 
 class App extends React.Component {
   
@@ -21,6 +24,7 @@ constructor() {
         <div className='toDoListArea'>
           <AddToDo addToDoFn= {this.addToDo}></AddToDo>
           <ToDoList updateToDoFn= {this.updateToDo} toDos={this.state.toDos}></ToDoList>
+          <Progress toDos={this.state.toDos}></Progress>
         </div>
     </div>
       )
@@ -63,7 +67,7 @@ constructor() {
     localStorage.setItem('toDos', JSON.stringify(newToDos));
     console.log(newToDos);
   };
-  
+
 
 }
 

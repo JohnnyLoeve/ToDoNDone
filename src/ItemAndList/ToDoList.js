@@ -1,5 +1,5 @@
 import React from 'react';
-import ToDoItem from '../ToDoItem/ToDoItem';
+import ToDoItem from './ToDoItem';
 import '../css/style.css'
 import { type } from '@testing-library/user-event/dist/type';
 
