@@ -1,7 +1,7 @@
 import React from 'react'
 import ToDoList from './ToDoList/ToDoList';
-import ToDoItem from './ToDoItem/ToDoItem';
 import AddToDo from './AddToDo/AddToDo';
+import './css/style.css'
 
 class App extends React.Component {
   
@@ -36,10 +36,11 @@ constructor() {
     }
   }
 
-  addToDo = async (toDo) => {
+  addToDo = async (toDo, type) => {
     await this.setState({toDos: [...this.state.toDos, {
       text: toDo,
-      completed: false
+      completed: false,
+      type: type
     }] })
     localStorage.setItem('toDos', JSON.stringify(this.state.toDos))
     console.log(localStorage.getItem('toDos'))
@@ -51,6 +52,7 @@ constructor() {
         return {
           text: toDo.text,
           completed: !toDo.completed,
+          type: toDo.type, 
         };
       } else {
         return _toDo;

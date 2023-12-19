@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.css'
+import '../css/style.css'
 
 class ToDoItem extends React.Component {
     render() {
@@ -7,7 +7,8 @@ class ToDoItem extends React.Component {
   
       return (
         <div className={'toDoItem' + (toDo.completed ? ' completed' : '')} onClick={this.toggleToDo}>
-          {toDo.text}
+          <div>Task: { toDo.text } </div>  
+          <div>Type: { toDo.type } </div>
         </div>
       );
     }
